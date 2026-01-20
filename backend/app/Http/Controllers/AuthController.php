@@ -14,14 +14,19 @@ class AuthController extends Controller
             'password' => 'required'
         ]);
 
-        if (!Auth::attempt($credentials)) {
+        if (!Auth::guard('web')->attempt($credentials)) {
             return response()->json([
                 'message' => 'Invalid credentials'
             ], 401);
         }
 
+        $user = Auth::guard('web')->user();
+
+        $token = $user->createToken('api-token')->plainTextToken;
+
         return response()->json([
-            'user' => Auth::user()
+            'token' => $token,
+            'user' => $user
         ]);
     }
 }
