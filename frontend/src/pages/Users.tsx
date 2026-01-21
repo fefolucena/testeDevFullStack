@@ -127,7 +127,7 @@ export function Users() {
 
                             {canEdit() && (
                                 <button
-                                    className="btn btn-success"
+                                    className="btn btn-primary"
                                     onClick={() => {
                                         setEditingUser(null);
                                         setForm({
@@ -226,36 +226,35 @@ export function Users() {
                             </div>
 
                             <div className="modal-body">
+                                <label className="form-label small text-muted mb-0">
+                                    Nome
+                                </label>
                                 <input
                                     className="form-control mb-2"
-                                    placeholder="Name"
+                                    placeholder="Nome"
                                     value={form.name}
                                     onChange={e =>
                                         setForm({ ...form, name: e.target.value })
                                     }
                                 />
 
+                                <label className="form-label small text-muted mb-0">
+                                    E-mail
+                                </label>
                                 <input
                                     className="form-control mb-2"
-                                    placeholder="Email"
+                                    placeholder="E-mail"
                                     value={form.email}
                                     onChange={e =>
                                         setForm({ ...form, email: e.target.value })
                                     }
                                 />
 
-                                <input
-                                    type="password"
-                                    className="form-control mb-2"
-                                    placeholder="Password"
-                                    value={form.password}
-                                    onChange={e =>
-                                        setForm({ ...form, password: e.target.value })
-                                    }
-                                />
-
+                                <label className="form-label small text-muted mb-0">
+                                    Perfil
+                                </label>
                                 <select
-                                    className="form-select"
+                                    className="form-select mb-2"
                                     value={form.role_level}
                                     onChange={e =>
                                         setForm({
@@ -268,20 +267,39 @@ export function Users() {
                                     <option value={2}>Moderador</option>
                                     <option value={3}>Leitor</option>
                                 </select>
+
+                                <label className="form-label small text-muted mb-0">
+                                    Senha
+                                </label>
+                                <input
+                                    type="password"
+                                    className="form-control"
+                                    placeholder={editingUser ? 'Nova senha (opcional)' : 'Senha'}
+                                    value={form.password}
+                                    onChange={e =>
+                                        setForm({ ...form, password: e.target.value })
+                                    }
+                                />
+
+                                {editingUser && (
+                                    <small className="text-muted">
+                                        Deixe em branco para manter a senha atual
+                                    </small>
+                                )}
                             </div>
 
                             <div className="modal-footer">
                                 <button
-                                    className="btn btn-secondary"
+                                    className="btn btn-danger"
                                     onClick={() => setShowModal(false)}
                                 >
-                                    Cancel
+                                    Cancelar
                                 </button>
                                 <button
                                     className="btn btn-primary"
                                     onClick={editingUser ? handleUpdateUser : handleCreateUser}
                                 >
-                                    Save
+                                    Salvar
                                 </button>
 
                             </div>

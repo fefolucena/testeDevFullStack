@@ -24,7 +24,7 @@ export function Login() {
 
             navigate('/');
         } catch (error) {
-            alert('Invalid email or password');
+            alert('E-mail ou senha inválidos.');
         }
     }
 
