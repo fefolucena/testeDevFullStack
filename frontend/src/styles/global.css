@@ -1,0 +1,20 @@
+body {
+  background-color: #2f2f2f;
+  min-height: 100vh;
+}
+
+:root {
+  --bg-dark: #1f1f1f;
+  --bg-soft: #2b2b2b;
+  --orange: #f7941d;
+  --text-light: #ffffff;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.dropdown-toggle {
+  background-color: #6c757d;
+  border: none;
+}
