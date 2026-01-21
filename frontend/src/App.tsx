@@ -3,6 +3,7 @@ import { Login } from './pages/Login';
 import { PrivateRoute } from './components/PrivateRoute';
 import { Users } from './pages/Users';
 import { Header } from './components/Header';
+import { NotFound } from './pages/NotFound';
 
 function App() {
   return (
@@ -30,6 +31,8 @@ function App() {
               </PrivateRoute>
             }
           />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div >

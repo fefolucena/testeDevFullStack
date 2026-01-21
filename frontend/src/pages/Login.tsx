@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { LoginInput } from '../components/LoginInput';
 import { LoginButton } from '../components/LoginButton';
 import { login } from '../services/api';
@@ -6,12 +6,18 @@ import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
 
 export function Login() {
-    const { login: authLogin } = useAuth();
+    const { login: authLogin, user } = useAuth();
 
     const navigate = useNavigate();
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    useEffect(() => {
+        if (user) {
+            navigate('/');
+        }
+    }, [user, navigate]);
 
     async function handleLogin() {
         try {
