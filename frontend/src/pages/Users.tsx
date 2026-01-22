@@ -31,22 +31,22 @@ export function Users() {
             const data = await getUsers();
             setUsers(data);
         } catch (error) {
-            alert('Error loading users');
+            alert('Erro ao carregar usuários');
         }
     }
 
     async function handleDelete(userId: number) {
         const confirmDelete = window.confirm(
-            'Are you sure you want to delete this user?'
+            'Tem certeza que você quer deletar este usuário?'
         );
 
         if (!confirmDelete) return;
 
         try {
             await deleteUser(userId);
-            loadUsers(); // recarrega a lista
+            loadUsers(); 
         } catch {
-            alert('Error deleting user');
+            alert('Erro ao deletar usuário');
         }
     }
 
@@ -62,7 +62,7 @@ export function Users() {
             });
             loadUsers();
         } catch {
-            alert('Error creating user');
+            alert('Erro ao criar usuário');
         }
     }
 
@@ -93,7 +93,7 @@ export function Users() {
 
             loadUsers();
         } catch {
-            alert('Error updating user');
+            alert('Erro ao atualizar usuário');
         }
     }
 
