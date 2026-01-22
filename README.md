@@ -3,7 +3,9 @@ Teste técnico para vaga de desenvolvedor fullstack pleno
 
 # Estrutura do projeto
 testeDevFullStack/
+
 ├── backend/ # API em Laravel com banco SQLite
+
 └── frontend/ # Aplicação React
 
 # Pré-requisitos para rodar o projeto
@@ -14,14 +16,24 @@ Para rodar o projeto localmente, é necessário ter instalado:
 - Node.js (>= 18 recomendado)
 - NPM ou Yarn
 
+# Usuários padrão:
+Login: admin@teste.com | Senha: 123456
+
+Login: moderador@teste.com | Senha: 123456
+
+Login: leitor@teste.com | Senha: 123456
+
 # Backend
 ## 1- Acessar a pasta "testeDevFullStack/backend"
 
 ## 2- Instalar as dependências
+Rode o seguinte comando no terminal:
 composer install
 
 ## 3- Configurar o ambiente
 Copie o arquivo .env.example para .env e ajuste as configurações do banco de dados
+
+⚠️ Importante: crie manualmente o arquivo `database.sqlite` dentro da pasta `backend/database` antes de rodar as migrations.
 
 DB_CONNECTION=sqlite
 DB_DATABASE=pasta_do_seu_projeto/testeDevFullStack/backend/database/database.sqlite
@@ -51,6 +63,9 @@ npm install
 
 ## 3- Subir a aplicação
 Rode o seguinte comando no terminal:
-npm run dev
+npm start
 
 e a aplicação ficará disponível em http://localhost:5173 
+
+# Observações
+1- Algumas IDEs podem apontar warning no método createToken(), por se tratar de método provido via trait do Laravel Sanctum. A aplicação funciona corretamente.	
