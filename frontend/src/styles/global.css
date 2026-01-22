@@ -1,6 +1,11 @@
 body {
   background-color: #2f2f2f;
   min-height: 100vh;
+  background-image: url('../assets/senac-logo-background.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 :root {
@@ -17,4 +22,19 @@ body {
 .dropdown-toggle {
   background-color: #6c757d;
   border: none;
+}
+
+.app-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-content {
+  flex: 1;
+  display: flex;
+}
+
+.app-background {
+  min-height: 100vh;
 }

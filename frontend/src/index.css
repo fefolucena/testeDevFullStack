@@ -1,9 +1,12 @@
-.login-wrapper {
-  height: 100vh;
-  background: linear-gradient(135deg, #1c1c1c, #3a3a3a);
-}
-
 .login-card {
   background-color: #f39c12;
   width: 320px;
 }
+
+.login-page {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+

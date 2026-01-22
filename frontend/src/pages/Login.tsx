@@ -4,6 +4,7 @@ import { LoginButton } from '../components/LoginButton';
 import { login } from '../services/api';
 import { useAuth } from '../contexts/AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { Footer } from '../components/Footer';
 
 export function Login() {
     const { login: authLogin, user } = useAuth();
@@ -35,7 +36,7 @@ export function Login() {
     }
 
     return (
-        <div className="login-wrapper d-flex align-items-center justify-content-center">
+        <div className="login-page">
             <div className="login-card p-4 rounded">
                 <h4 className="text-center text-white mb-4">
                     Faça o seu login
