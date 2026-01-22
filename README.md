@@ -33,12 +33,12 @@ composer install
 ## 3- Configurar o ambiente
 Copie o arquivo .env.example para .env e ajuste as configurações do banco de dados
 
-⚠️ Importante: crie manualmente o arquivo `database.sqlite` dentro da pasta `backend/database` antes de rodar as migrations.
-
 DB_CONNECTION=sqlite
 DB_DATABASE=pasta_do_seu_projeto/testeDevFullStack/backend/database/database.sqlite
 
 Obs: O banco SQLite é um arquivo local, facilitando a execução do projeto.
+
+⚠️ Importante: crie manualmente o arquivo `database.sqlite` dentro da pasta `backend/database` antes de rodar as migrations.
 
 ## 4- Gerar a chave da aplicação
 Rode o seguinte comando no terminal:
@@ -48,7 +48,11 @@ php artisan key:generate
 Rode o seguinte comando no terminal:
 php artisan migrate
 
-## 6- Subir o servidor
+## 6- Subir os usuários de teste via Seeders
+Rode o seguinte comando no terminal:
+php artisan db:seed
+
+## 7- Subir o servidor
 Rode o seguinte comando no terminal:
 php artisan serve
 
@@ -65,7 +69,7 @@ npm install
 Rode o seguinte comando no terminal:
 npm start
 
-e a aplicação ficará disponível em http://localhost:5173 
+e a aplicação ficará disponível em http://localhost:3000 
 
 # Observações
 1- Algumas IDEs podem apontar warning no método createToken(), por se tratar de método provido via trait do Laravel Sanctum. A aplicação funciona corretamente.	
