@@ -1,40 +1,80 @@
 body {
-  background-color: #2f2f2f;
-  min-height: 100vh;
-  background-image: url('../assets/senac-logo-background.png');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
+    background-color: #2f2f2f;
+    min-height: 100vh;
+    background-image: url('../assets/senac-logo-background.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 :root {
-  --bg-dark: #1f1f1f;
-  --bg-soft: #2b2b2b;
-  --orange: #f7941d;
-  --text-light: #ffffff;
+    --bg-dark: #1f1f1f;
+    --bg-soft: #2b2b2b;
+    --orange: #f7941d;
+    --text-light: #ffffff;
 }
 
 .card {
-  border-radius: 12px;
+    border-radius: 12px;
 }
 
 .dropdown-toggle {
-  background-color: #6c757d;
-  border: none;
+    background-color: #6c757d;
+    border: none;
 }
 
 .app-layout {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 .app-content {
-  flex: 1;
-  display: flex;
+    flex: 1;
+    display: flex;
 }
 
 .app-background {
-  min-height: 100vh;
+    min-height: 100vh;
+}
+
+.forgot-password {
+    font-size: 0.85rem;
+    color: #ffffff;
+    opacity: 0.9;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.modal-logo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.modal-logo img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.login-card {
+  background-color: #f39c12;
+  width: 320px;
+}
+
+.login-page {
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.help-button {
+    background-color: #f39c12;
 }

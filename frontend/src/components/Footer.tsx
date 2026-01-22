@@ -14,7 +14,7 @@ export function Footer() {
                     </div>
 
                     <button
-                        className="btn btn-outline-light btn-sm"
+                        className="btn text-white help-button rounded-5 font-monospace"
                         onClick={() => setShowFaq(true)}
                     >
                         Ajuda
@@ -27,7 +27,7 @@ export function Footer() {
                     <div className="modal-dialog modal-dialog-centered">
                         <div className="modal-content">
                             <div className="modal-header">
-                                <h5 className="modal-title">Ajuda / FAQ</h5>
+                                <h5 className="modal-title">Ajuda</h5>
                                 <button
                                     type="button"
                                     className="btn-close"
@@ -36,19 +36,15 @@ export function Footer() {
                             </div>
 
                             <div className="modal-body">
-                                <p><strong>❓ Esqueci meu login ou senha</strong></p>
-                                <p>Entre em contato com o administrador do sistema.</p>
-
-                                <p><strong>❓ Quem pode criar usuários?</strong></p>
-                                <p>Apenas perfis Administrador ou Moderador.</p>
-
-                                <p><strong>❓ Problemas de acesso</strong></p>
-                                <p>Verifique sua conexão ou tente novamente mais tarde.</p>
+                                <p><strong>Usuários padrão: </strong></p>
+                                <p>Login: admin@teste.com | Senha: 123456</p>
+                                <p>Login: moderador@teste.com | Senha: 123456</p>
+                                <p>Login: leitor@teste.com | Senha: 123456</p>
                             </div>
 
                             <div className="modal-footer">
                                 <button
-                                    className="btn btn-secondary"
+                                    className="btn btn-danger"
                                     onClick={() => setShowFaq(false)}
                                 >
                                     Fechar
